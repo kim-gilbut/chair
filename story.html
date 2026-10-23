@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repose — Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Noto+Serif+KR:wght@300;400;500;700&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap">
+<style>
+body{margin:0;background:#F7F3EC;color:#2B2825;font-family:'Pretendard','Noto Sans KR',system-ui,sans-serif;font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p,ul,figure{margin:0;padding:0}
+ul{list-style:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1360px;margin:0 auto;padding:0 80px}
+.sec{padding:140px 0}
+.ivory{background:#F7F3EC}
+.sand{background:#F7F3EC}
+.sec.sand{padding:20px 40px}
+.sec.sand>.wrap{background:#EDE5D8;border-radius:32px;padding:110px 80px}
+.banner,.hero.ondark{margin:20px 40px;border-radius:32px}
+.dark{background:#4A3728;color:#F7F3EC}
+.eb{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:#7F6030;font-weight:500;line-height:1.5;margin-bottom:20px}
+.dark .eb,.ondark .eb{color:#D9BC86}
+.ser{font-family:'Cormorant Garamond','Noto Serif KR',serif}
+.ko{font-family:'Noto Serif KR','Cormorant Garamond',serif;font-weight:400}
+.h2{font-family:'Noto Serif KR','Cormorant Garamond',serif;font-weight:700;font-size:40px;line-height:1.35;letter-spacing:-.01em;color:#4A3728}
+.dark .h2,.ondark .h2{color:#F7F3EC}
+.lead{color:#5A4F45;font-size:17px;line-height:1.8}
+.dark .lead,.ondark .lead{color:#E6DCCB}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 32px;background:#A8844F;color:#1F1B18;font-size:15px;font-weight:600;letter-spacing:.06em;border:1px solid #A8844F;border-radius:999px;transition:background .3s}
+.btn:hover{background:#B8935C}
+.btn.line{background:transparent;color:inherit;border-color:currentColor}
+.btn.line:hover{background:rgba(168,132,79,.18)}
+.btn.sm{height:40px;padding:0 20px;font-size:13px}
+.lnk{display:inline-block;font-size:15px;font-weight:600;letter-spacing:.04em;color:#4A3728;border-bottom:1px solid #A8844F;padding-bottom:3px}
+.split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.ph{overflow:hidden;border-radius:24px;background:#EDE5D8}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ph:hover img{transform:scale(1.05)}
+.c3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.c4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:84px;padding:0 80px;position:sticky;top:0;z-index:20;background:rgba(247,243,236,.94);border-bottom:1px solid rgba(184,169,154,.5);color:#4A3728}
+.mark{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#4A3728;color:#F7F3EC;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;line-height:1}
+.hd .r{justify-self:end}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;letter-spacing:.08em}
+.nav a{font-size:14px;letter-spacing:.08em;margin:0 20px;padding:6px 0;color:#2B2825}
+.nav a:hover,.nav a[aria-current]{border-bottom:1px solid #A8844F}
+.ft{background:#4A3728;color:#F7F3EC;padding:96px 0 48px}
+.ft h4{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:#D9BC86;font-weight:500;margin-bottom:20px}
+.ft p,.ft li,.ft a{font-size:15px;line-height:2;color:#E6DCCB}
+.ft a:hover{color:#fff}
+.fab{display:none}
+.ico{width:40px;height:40px;fill:none;stroke:#A8844F;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.step{border-top:1px solid #A8844F;padding:36px 28px 0 0;position:relative}
+.step::before{content:'';position:absolute;left:0;top:-4px;width:7px;height:7px;border-radius:50%;background:#A8844F}
+.tl{border-top:1px solid #A8844F;padding-top:36px;position:relative}
+.tl::before{content:'';position:absolute;left:0;top:-5px;width:9px;height:9px;border-radius:50%;background:#A8844F}
+.mat{display:flex;justify-content:space-between;gap:24px;padding:18px 0;border-bottom:1px solid #B8A99A}
+@keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){.rv{animation:rise .8s linear both;animation-timeline:view();animation-range:entry 0% entry 55%}}
+.sw{}
+@media (max-width:860px){
+.wrap{padding:0 20px}
+.sec{padding:80px 0}
+.sec.sand{padding:12px}
+.sec.sand>.wrap{padding:56px 20px;border-radius:24px}
+.banner,.hero.ondark{margin:12px;border-radius:24px}
+.h2{font-size:32px}
+.hd{padding:0 20px;grid-template-columns:auto 1fr auto}
+.nav{text-align:right}
+.hd .btn{display:none}
+.nav a{margin:0 0 0 14px;font-size:13px}
+.split>*{grid-column:1 / -1 !important}
+.split>*+*{margin-top:40px}
+.c3{grid-template-columns:1fr}
+.c4{grid-template-columns:1fr 1fr;row-gap:48px}
+.sw{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px}
+.sw>*{flex:0 0 82%;scroll-snap-align:start}
+.hero{height:460px !important}
+.hero h1{font-size:44px !important}
+.big{font-size:30px !important}
+.banner{height:460px !important}
+.f4{grid-template-columns:1fr 1fr !important;row-gap:40px !important}
+.fab{display:flex;position:fixed;left:20px;right:20px;bottom:16px;z-index:30;height:52px;align-items:center;justify-content:center;background:#A8844F;color:#1F1B18;font-weight:600;font-size:15px;letter-spacing:.06em;box-shadow:0 6px 20px rgba(43,40,37,.25)}
+}
+</style>
+</head>
+<body>
+<div>
+<header class="hd">
+<a href="index.html" aria-label="Repose 홈" style="display:flex;align-items:center"><span class="mark" aria-hidden="true">R</span></a>
+<nav class="nav"><a href="story.html" aria-current="page">Story</a><a href="collections.html">Collections</a><a href="visit.html">Visit</a></nav>
+<div class="r"><a class="btn sm" href="visit.html">Book a Visit</a></div>
+</header>
+
+<!-- 01 히어로 -->
+<section class="hero ondark" style="position:relative;height:640px;overflow:hidden;background:#2B2825;color:#F7F3EC">
+<img src="assets/cradle.png" alt="은은한 빛이 드는 거실의 라운지 체어" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%">
+<div style="position:absolute;inset:0;background:rgba(43,40,37,.5)"></div>
+<div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px">
+<p class="eb" style="color:#E8D3A8">About Repose</p>
+<h1 class="ser" style="font-size:72px;line-height:1.08;font-weight:500;margin-bottom:20px">Comfort, made with care.</h1>
+<p style="font-size:19px;color:#F1E9DC">정성으로 만든 편안함</p>
+</div>
+</section>
+
+<!-- 02 장인의 한마디 -->
+<section class="sec ivory" style="padding-bottom:70px">
+<div class="wrap" style="text-align:center">
+<p class="ko rv big" style="font-size:44px;line-height:1.6;color:#4A3728;max-width:840px;margin:0 auto 28px">“좋은 의자는 앉는 순간<br>숨이 깊어진다.”</p>
+<p style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#7F6030">— Repose 장인</p>
+</div>
+</section>
+
+<!-- 03 시작 이야기 -->
+<section class="sec ivory" style="padding-top:70px">
+<div class="wrap">
+<div class="split">
+<div class="rv" style="grid-column:1 / span 6;grid-row:1">
+<p class="eb">Our Beginning</p>
+<h2 class="h2" style="margin-bottom:32px">시작 이야기</h2>
+<p class="lead" style="margin-bottom:20px">가구 공방에서 20년을 일한 장인은 늘 같은 질문을 했습니다. “앉는 순간 숨이 깊어지는 의자는 어떻게 만들까?”</p>
+<p class="lead" style="margin-bottom:20px">Repose는 그 질문의 답을 찾는 일에서 시작했습니다.</p>
+<p class="lead">유행보다 앉았을 때의 편안함을, 빠른 소비보다 오래 가는 품격을 선택했습니다.</p>
+</div>
+<div class="ph rv" style="grid-column:8 / span 5;grid-row:1;aspect-ratio:4 / 5"><img src="assets/hush.png" alt="저녁 조명 아래의 안락 의자"></div>
+</div>
+</div>
+</section>
+
+<!-- 04 핵심 가치 3카드 -->
+<section class="sec sand">
+<div class="wrap">
+<p class="eb" style="text-align:center">Our Values</p>
+<h2 class="h2" style="text-align:center;margin-bottom:72px">Repose가 지키는 세 가지</h2>
+<div class="c3 sw">
+<div class="rv">
+<div class="ph" style="aspect-ratio:1 / 1;margin-bottom:28px"><img src="assets/detail-backrest.png" alt="등판 곡선 클로즈업"></div>
+<h3 class="ser" style="font-size:30px;font-weight:500;color:#4A3728;margin-bottom:10px">Soft Comfort</h3>
+<p class="lead">몸의 곡선을 따라 감싸는 앉음새를 만듭니다.</p>
+</div>
+<div class="rv">
+<div class="ph" style="aspect-ratio:1 / 1;margin-bottom:28px"><img src="assets/detail-wood-joint.png" alt="장인의 손길이 닿은 나무 이음새"></div>
+<h3 class="ser" style="font-size:30px;font-weight:500;color:#4A3728;margin-bottom:10px">Fine Craft</h3>
+<p class="lead">모든 이음새와 마감을 사람의 손으로 확인합니다.</p>
+</div>
+<div class="rv">
+<div class="ph" style="aspect-ratio:1 / 1;margin-bottom:28px"><img src="assets/detail-fabric.png" alt="직물 질감 클로즈업"></div>
+<h3 class="ser" style="font-size:30px;font-weight:500;color:#4A3728;margin-bottom:10px">Lasting Quality</h3>
+<p class="lead">오래 써도 처음의 품격을 지키도록 수선까지 책임집니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 05 장인 소개 -->
+<section class="sec ivory">
+<div class="wrap">
+<div class="split">
+<div class="ph rv" style="grid-column:1 / span 5;aspect-ratio:4 / 5"><img src="assets/detail-wood-joint.png" alt="나무 결과 이음새를 보여 주는 손작업 클로즈업" style="object-position:35% 45%"></div>
+<div class="rv" style="grid-column:7 / span 6">
+<p class="eb">The Craftsman</p>
+<h2 class="h2" style="margin-bottom:28px">20년, 나무와 함께</h2>
+<p class="lead" style="margin-bottom:20px">결을 읽는 일부터 시작합니다.</p>
+<p class="lead">같은 나무는 하나도 없기에, 의자마다 가장 고운 면을 앉는 자리에 둡니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 06 만드는 과정 4단계 -->
+<section class="sec ivory" style="border-top:1px solid #DDD3C3">
+<div class="wrap">
+<p class="eb">The Process</p>
+<h2 class="h2" style="margin-bottom:72px">만드는 과정</h2>
+<div class="c4 sw">
+<div class="step rv">
+<svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="8"/><circle cx="20" cy="20" r="3"/></svg>
+<p class="ser" style="font-size:15px;letter-spacing:.2em;color:#7F6030;margin:20px 0 6px">01</p>
+<h3 class="ko" style="font-size:22px;color:#4A3728;margin-bottom:10px">원목 선별</h3>
+<p class="lead" style="font-size:16px">결이 고운 원목만 고릅니다.</p>
+</div>
+<div class="step rv">
+<svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="6"/><path d="M20 6v4M20 30v4M6 20h4M30 20h4M10 10l3 3M27 27l3 3M30 10l-3 3M13 27l-3 3"/></svg>
+<p class="ser" style="font-size:15px;letter-spacing:.2em;color:#7F6030;margin:20px 0 6px">02</p>
+<h3 class="ko" style="font-size:22px;color:#4A3728;margin-bottom:10px">충분한 건조</h3>
+<p class="lead" style="font-size:16px">나무가 안정될 때까지 천천히 말립니다.</p>
+</div>
+<div class="step rv">
+<svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="14" width="26" height="14" rx="6"/><path d="M12 28v5M28 28v5"/></svg>
+<p class="ser" style="font-size:15px;letter-spacing:.2em;color:#7F6030;margin:20px 0 6px">03</p>
+<h3 class="ko" style="font-size:22px;color:#4A3728;margin-bottom:10px">틀과 쿠션</h3>
+<p class="lead" style="font-size:16px">프레임을 짜고 여러 겹의 쿠션을 손으로 채웁니다.</p>
+</div>
+<div class="step rv">
+<svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><path d="M13 20.5l5 5 9-10"/></svg>
+<p class="ser" style="font-size:15px;letter-spacing:.2em;color:#7F6030;margin:20px 0 6px">04</p>
+<h3 class="ko" style="font-size:22px;color:#4A3728;margin-bottom:10px">마감과 확인</h3>
+<p class="lead" style="font-size:16px">직물을 입히고 모든 이음새를 직접 확인합니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 07 나무와 직물 -->
+<section class="sec sand">
+<div class="wrap">
+<div class="split">
+<div class="ph rv" style="grid-column:1 / span 7;aspect-ratio:3 / 2"><img src="assets/fabric-colors.png" alt="세 가지 색상의 직물 쿠션"></div>
+<div class="rv" style="grid-column:9 / span 4">
+<p class="eb">Materials</p>
+<h2 class="h2" style="margin-bottom:32px">오래 곁에 둘 소재만 고릅니다</h2>
+<div style="border-top:1px solid #B8A99A">
+<div class="mat"><span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7F6030">Wood</span><span style="text-align:right">물푸레나무(Ash), 호두나무(Walnut)</span></div>
+<div class="mat"><span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7F6030">Fabric</span><span style="text-align:right">바우클레, 리넨 혼방</span></div>
+<div class="mat"><span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7F6030">Finish</span><span style="text-align:right">천연 오일</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 08 Repose의 걸음 -->
+<section class="sec ivory">
+<div class="wrap">
+<p class="eb">Our Journey</p>
+<h2 class="h2" style="margin-bottom:72px">Repose의 걸음</h2>
+<div class="c3">
+<div class="tl rv"><p class="ser" style="font-size:34px;color:#4A3728;line-height:1.2;margin-bottom:12px">20년 전</p><p class="lead">장인이 작은 가구 공방을 시작합니다.</p></div>
+<div class="tl rv"><p class="ser" style="font-size:34px;color:#4A3728;line-height:1.2;margin-bottom:12px">몇 해 전</p><p class="lead">앉는 순간의 편안함을 연구하며 Repose를 준비합니다.</p></div>
+<div class="tl rv"><p class="ser" style="font-size:34px;color:#4A3728;line-height:1.2;margin-bottom:12px">오늘</p><p class="lead">쇼룸에서 직접 앉아 보며 고르는 의자를 선보입니다.</p></div>
+</div>
+</div>
+</section>
+
+<!-- 09 수선 약속 -->
+<section class="sec dark">
+<div class="wrap">
+<div style="text-align:center;margin-bottom:80px">
+<p class="eb">Our Promise</p>
+<h2 class="h2" style="max-width:720px;margin:0 auto">오래 곁에 둘수록 더 편안해지는 의자를 만듭니다.</h2>
+</div>
+<div class="c3 sw">
+<div class="rv" style="text-align:center;padding:0 12px">
+<svg class="ico" style="stroke:#D9BC86" viewBox="0 0 40 40" aria-hidden="true"><path d="M26 8a7 7 0 0 0-6 9L9 28a3 3 0 0 0 4 4l11-11a7 7 0 0 0 9-6l-4 4-4-1-1-4z"/></svg>
+<h3 class="ko" style="font-size:24px;margin:20px 0 10px">수선</h3>
+<p class="lead">흔들리는 다리와 이음새를 고칩니다.</p>
+</div>
+<div class="rv" style="text-align:center;padding:0 12px">
+<svg class="ico" style="stroke:#D9BC86" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 15h22l-5-5M32 25H10l5 5"/></svg>
+<h3 class="ko" style="font-size:24px;margin:20px 0 10px">부품 교체</h3>
+<p class="lead">닳은 쿠션과 패드를 교체합니다.</p>
+</div>
+<div class="rv" style="text-align:center;padding:0 12px">
+<svg class="ico" style="stroke:#D9BC86" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 12c8 4 16-4 24 0v16c-8-4-16 4-24 0z"/></svg>
+<h3 class="ko" style="font-size:24px;margin:20px 0 10px">재커버</h3>
+<p class="lead">직물을 새로 입혀 드립니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 10 하단 CTA -->
+<section class="banner ondark" style="position:relative;height:560px;overflow:hidden;background:#2B2825;color:#F7F3EC">
+<img src="assets/showroom.png" alt="Repose 쇼룸 전경" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;background:rgba(43,40,37,.55)"></div>
+<div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px">
+<h2 class="h2 big" style="font-size:48px;margin-bottom:36px">의자를 직접 만나보세요.</h2>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
+<a class="btn line" href="collections.html">Meet the Chairs</a>
+<a class="btn" href="visit.html">Book a Visit</a>
+</div>
+</div>
+</section>
+
+<footer class="ft">
+<div class="wrap">
+<div class="f4" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;column-gap:48px;padding-bottom:64px;border-bottom:1px solid rgba(184,169,154,.4)">
+<div><p class="logo" style="font-size:32px;color:#F7F3EC">Repose</p><p style="margin-top:8px">Rest, beautifully.</p></div>
+<div><h4>Menu</h4><ul><li><a href="story.html">Story</a></li><li><a href="collections.html">Collections</a></li><li><a href="visit.html">Visit</a></li></ul></div>
+<div><h4>Showroom</h4><p>서울시 강남구 ○○로 12<br>화~일 11:00~19:00</p></div>
+<div><h4>Follow</h4><ul><li><a href="#">인스타그램</a></li><li><a href="#">카카오톡</a></li></ul></div>
+</div>
+<p style="font-size:13px;color:#D9CFC0;padding-top:28px">© Repose</p>
+</div>
+</footer>
+<a class="fab" href="visit.html">Book a Visit</a>
+</div>
+</body>
+</html>

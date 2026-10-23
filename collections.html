@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repose — Collections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Noto+Serif+KR:wght@300;400;500;700&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F3EC;color:#2B2825;font-family:'Pretendard','Noto Sans KR',system-ui,sans-serif;font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p,ul,figure{margin:0;padding:0}
+ul{list-style:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1360px;margin:0 auto;padding:0 80px}
+.sec{padding:140px 0}
+.ivory{background:#F7F3EC}
+.sand{background:#F7F3EC}
+.sec.sand{padding:20px 40px}
+.sec.sand>.wrap{background:#EDE5D8;border-radius:32px;padding:110px 80px}
+.banner,.hero.ondark{margin:20px 40px;border-radius:32px}
+.dark{background:#4A3728;color:#F7F3EC}
+.eb{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:#7F6030;font-weight:500;line-height:1.5;margin-bottom:20px}
+.dark .eb,.ondark .eb{color:#D9BC86}
+.ser{font-family:'Cormorant Garamond','Noto Serif KR',serif}
+.ko{font-family:'Noto Serif KR','Cormorant Garamond',serif;font-weight:400}
+.h2{font-family:'Noto Serif KR','Cormorant Garamond',serif;font-weight:700;font-size:40px;line-height:1.35;letter-spacing:-.01em;color:#4A3728}
+.dark .h2,.ondark .h2{color:#F7F3EC}
+.lead{color:#5A4F45;font-size:17px;line-height:1.8}
+.dark .lead,.ondark .lead{color:#E6DCCB}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 32px;background:#A8844F;color:#1F1B18;font-size:15px;font-weight:600;letter-spacing:.06em;border:1px solid #A8844F;border-radius:999px;transition:background .3s}
+.btn:hover{background:#B8935C}
+.btn.line{background:transparent;color:inherit;border-color:currentColor}
+.btn.sm{height:40px;padding:0 20px;font-size:13px}
+.lnk{display:inline-block;font-size:15px;font-weight:600;letter-spacing:.04em;color:#4A3728;border-bottom:1px solid #A8844F;padding-bottom:3px}
+.split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.ph{overflow:hidden;border-radius:24px;background:#EDE5D8}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ph:hover img{transform:scale(1.05)}
+.c3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:84px;padding:0 80px;position:sticky;top:0;z-index:20;background:rgba(247,243,236,.96);border-bottom:1px solid rgba(184,169,154,.5);color:#4A3728}
+.mark{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:#4A3728;color:#F7F3EC;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;line-height:1}
+.hd .r{justify-self:end}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;letter-spacing:.08em}
+.nav a{font-size:14px;letter-spacing:.08em;margin:0 20px;padding:6px 0;color:#2B2825}
+.nav a:hover,.nav a[aria-current]{border-bottom:1px solid #A8844F}
+.tabs{position:sticky;top:84px;z-index:15;background:rgba(237,229,216,.96);border-bottom:1px solid #D2C6B4;border-top:1px solid #D2C6B4}
+.tabs .in{display:flex;justify-content:center;gap:56px;height:60px;align-items:center}
+.tabs a{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.06em;color:#4A3728;padding:4px 0;border-bottom:1px solid transparent}
+.tabs a:hover{border-bottom-color:#A8844F}
+.spec{display:flex;gap:20px;padding:14px 0;border-bottom:1px solid #C9BCAA;font-size:15px;line-height:1.7}
+.spec b{flex:0 0 84px;font-weight:600;color:#7F6030;font-size:13px;letter-spacing:.08em}
+.hv{border-radius:24px;border:1px solid #B8A99A;background:#F7F3EC;padding:56px 36px;transition:background .4s}
+.hv:hover{background:#EDE5D8}
+.tbl{width:100%;border-collapse:collapse;min-width:760px;background:#F7F3EC}
+.tbl th{background:#4A3728;color:#F7F3EC;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;letter-spacing:.06em;padding:22px 24px;text-align:left}
+.tbl td{padding:22px 24px;border-bottom:1px solid #B8A99A;font-size:16px;line-height:1.7;vertical-align:top}
+.tbl td:first-child{font-size:13px;letter-spacing:.14em;font-weight:600;color:#7F6030;width:15%}
+.ft{background:#4A3728;color:#F7F3EC;padding:96px 0 48px}
+.ft h4{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:#D9BC86;font-weight:500;margin-bottom:20px}
+.ft p,.ft li,.ft a{font-size:15px;line-height:2;color:#E6DCCB}
+.ft a:hover{color:#fff}
+.fab{display:none}
+@keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){.rv{animation:rise .8s linear both;animation-timeline:view();animation-range:entry 0% entry 55%}}
+@media (max-width:860px){
+.wrap{padding:0 20px}
+.sec{padding:80px 0}
+.sec.sand{padding:12px}
+.sec.sand>.wrap{padding:56px 20px;border-radius:24px}
+.banner,.hero.ondark{margin:12px;border-radius:24px}
+.h2{font-size:32px}
+.hd{padding:0 20px;grid-template-columns:auto 1fr auto}
+.nav{text-align:right}
+.hd .btn{display:none}
+.nav a{margin:0 0 0 14px;font-size:13px}
+.tabs .in{gap:28px}
+.split>*{grid-column:1 / -1 !important}
+.split>*+*{margin-top:40px}
+.c3{grid-template-columns:1fr}
+.banner{height:420px !important}
+.banner h1{font-size:36px !important}
+.big{font-size:30px !important}
+.f4{grid-template-columns:1fr 1fr !important;row-gap:40px !important}
+.fab{display:flex;position:fixed;left:20px;right:20px;bottom:16px;z-index:30;height:52px;align-items:center;justify-content:center;background:#A8844F;color:#1F1B18;font-weight:600;font-size:15px;letter-spacing:.06em;box-shadow:0 6px 20px rgba(43,40,37,.25)}
+}
+</style>
+</head>
+<body>
+<div>
+<header class="hd">
+<a href="index.html" aria-label="Repose 홈" style="display:flex;align-items:center"><span class="mark" aria-hidden="true">R</span></a>
+<nav class="nav"><a href="story.html">Story</a><a href="collections.html" aria-current="page">Collections</a><a href="visit.html">Visit</a></nav>
+<div class="r"><a class="btn sm" href="visit.html">Book a Visit</a></div>
+</header>
+
+<!-- 01 페이지 배너 -->
+<section class="banner ondark" style="position:relative;height:540px;overflow:hidden;background:#2B2825;color:#F7F3EC">
+<img src="assets/collections-trio.png" alt="Calm, Hush, Cradle 세 컬렉션 의자" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,40,37,.1) 20%,rgba(43,40,37,.78) 100%)"></div>
+<div class="wrap" style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:64px;text-align:center;align-items:center">
+<p class="eb" style="color:#E8D3A8">Collections</p>
+<h1 class="ko" style="font-size:56px;line-height:1.3;font-weight:400">하루의 시간에 맞춘 세 가지 의자</h1>
+</div>
+</section>
+
+<!-- 02 소개 + 앵커 탭 -->
+<section class="sec ivory" style="padding:110px 0 100px">
+<div class="wrap" style="text-align:center">
+<p class="lead rv" style="max-width:560px;margin:0 auto;font-size:19px">아침의 식탁에서 깊은 밤의 거실까지,<br>머무는 방식에 따라 고른 세 가지 컬렉션입니다.</p>
+</div>
+</section>
+<nav class="tabs" aria-label="컬렉션 바로가기">
+<div class="in"><a href="#calm">Calm</a><a href="#cradle">Cradle</a><a href="#hush">Hush</a></div>
+</nav>
+
+<!-- 03 이름에 담긴 뜻 -->
+<section class="sec sand">
+<div class="wrap">
+<p class="eb" style="text-align:center">The Names</p>
+<h2 class="h2" style="text-align:center;margin-bottom:72px">이름에 담긴 뜻</h2>
+<div class="c3" style="text-align:center">
+<div class="rv"><p class="ser" style="font-size:68px;line-height:1.1;color:#4A3728;font-weight:500">Calm</p><p class="lead" style="margin-top:12px">차분하고 고요한 마음</p></div>
+<div class="rv"><p class="ser" style="font-size:68px;line-height:1.1;color:#4A3728;font-weight:500">Cradle</p><p class="lead" style="margin-top:12px">요람처럼 감싸 안는 품</p></div>
+<div class="rv"><p class="ser" style="font-size:68px;line-height:1.1;color:#4A3728;font-weight:500">Hush</p><p class="lead" style="margin-top:12px">소리마저 가라앉는 고요</p></div>
+</div>
+</div>
+</section>
+
+<!-- 04 Calm -->
+<section id="calm" class="sec ivory" style="scroll-margin-top:150px">
+<div class="wrap">
+<div class="split">
+<div class="ph rv" style="grid-column:1 / span 5;aspect-ratio:4 / 5"><img src="assets/calm.png" alt="식탁 옆 Calm 체어"></div>
+<div class="rv" style="grid-column:7 / span 6">
+<p class="eb">01 · Calm</p>
+<h2 class="h2" style="margin-bottom:20px">차분하게 집중하는 시간.</h2>
+<p class="lead" style="margin-bottom:32px">식탁과 서재에서 허리를 편안하게 받쳐 줍니다.</p>
+<div style="border-top:1px solid #C9BCAA;margin-bottom:40px">
+<div class="spec"><b>추천 공간</b><span>식탁, 서재</span></div>
+<div class="spec"><b>프레임</b><span>물푸레나무</span></div>
+<div class="spec"><b>직물</b><span>샌드 리넨</span></div>
+<div class="spec"><b>라인업</b><span>Calm Dining Chair, Calm Study Chair</span></div>
+</div>
+<a class="btn" href="cradle.html">View Collection</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 05 Cradle -->
+<section id="cradle" class="sec sand" style="scroll-margin-top:150px">
+<div class="wrap">
+<div class="split">
+<div class="rv" style="grid-column:1 / span 6;grid-row:1">
+<p class="eb">02 · Cradle</p>
+<h2 class="h2" style="margin-bottom:20px">요람 같은 휴식.</h2>
+<p class="lead" style="margin-bottom:32px">등과 팔을 감싸는 곡선으로 몸을 맡길 수 있습니다.</p>
+<div style="border-top:1px solid #C9BCAA;margin-bottom:40px">
+<div class="spec"><b>추천 공간</b><span>거실, 침실 코너</span></div>
+<div class="spec"><b>프레임</b><span>호두나무</span></div>
+<div class="spec"><b>직물</b><span>아이보리 바우클레</span></div>
+<div class="spec"><b>라인업</b><span>Cradle Lounge Chair, Armchair, Ottoman</span></div>
+</div>
+<a class="btn" href="cradle.html">View Collection</a>
+</div>
+<div class="ph rv" style="grid-column:8 / span 5;grid-row:1;aspect-ratio:4 / 5"><img src="assets/cradle.png" alt="거실 코너의 Cradle 체어"></div>
+</div>
+</div>
+</section>
+
+<!-- 06 Hush -->
+<section id="hush" class="sec ivory" style="scroll-margin-top:150px">
+<div class="wrap">
+<div class="split">
+<div class="ph rv" style="grid-column:1 / span 5;aspect-ratio:4 / 5"><img src="assets/hush.png" alt="저녁 조명 아래의 Hush 체어"></div>
+<div class="rv" style="grid-column:7 / span 6">
+<p class="eb">03 · Hush</p>
+<h2 class="h2" style="margin-bottom:20px">고요한 저녁.</h2>
+<p class="lead" style="margin-bottom:32px">낮고 깊게 앉아 하루의 긴장을 내려놓습니다.</p>
+<div style="border-top:1px solid #C9BCAA;margin-bottom:40px">
+<div class="spec"><b>추천 공간</b><span>거실, 휴식 공간</span></div>
+<div class="spec"><b>프레임</b><span>호두나무</span></div>
+<div class="spec"><b>직물</b><span>모카 소프트 패브릭</span></div>
+<div class="spec"><b>라인업</b><span>Hush Armchair, Hush Ottoman</span></div>
+</div>
+<a class="btn" href="cradle.html">View Collection</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 07 한눈에 비교표 -->
+<section class="sec sand">
+<div class="wrap">
+<p class="eb">Compare</p>
+<h2 class="h2" style="margin-bottom:56px">한눈에 비교표</h2>
+<div style="overflow-x:auto">
+<table class="tbl">
+<thead><tr><th scope="col">구분</th><th scope="col">Calm</th><th scope="col">Cradle</th><th scope="col">Hush</th></tr></thead>
+<tbody>
+<tr><td>앉음새</td><td>곧고 가볍게</td><td>감싸듯 깊게</td><td>낮고 아주 깊게</td></tr>
+<tr><td>추천 공간</td><td>식탁·서재</td><td>거실·침실</td><td>휴식 공간</td></tr>
+<tr><td>프레임</td><td>물푸레</td><td>호두</td><td>호두</td></tr>
+<tr><td>이런 분께</td><td>오래 앉아 일하고 식사하는 분</td><td>책과 음악을 즐기는 분</td><td>하루를 마무리하는 자리를 찾는 분</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- 08 공간별 제안 -->
+<section class="sec ivory">
+<div class="wrap">
+<p class="eb" style="text-align:center">By Space</p>
+<h2 class="h2" style="text-align:center;margin-bottom:72px">공간별 제안</h2>
+<div class="c3">
+<div class="hv rv"><h3 class="ko" style="font-size:28px;color:#4A3728;margin-bottom:14px">식탁 옆</h3><p class="lead" style="margin-bottom:28px">아침 식사와 일을 함께 하는 자리</p><p class="ser" style="font-size:28px;color:#7F6030">→ Calm</p></div>
+<div class="hv rv"><h3 class="ko" style="font-size:28px;color:#4A3728;margin-bottom:14px">창가</h3><p class="lead" style="margin-bottom:28px">책을 펼치고 오래 머무는 자리</p><p class="ser" style="font-size:28px;color:#7F6030">→ Cradle</p></div>
+<div class="hv rv"><h3 class="ko" style="font-size:28px;color:#4A3728;margin-bottom:14px">거실 구석</h3><p class="lead" style="margin-bottom:28px">불을 낮추고 하루를 마무리하는 자리</p><p class="ser" style="font-size:28px;color:#7F6030">→ Hush</p></div>
+</div>
+</div>
+</section>
+
+<!-- 09 어떤 의자가 맞을까요? -->
+<section class="sec sand">
+<div class="wrap">
+<p class="eb" style="text-align:center">Find Yours</p>
+<h2 class="h2" style="text-align:center;margin-bottom:72px">어떤 의자가 맞을까요?</h2>
+<div class="c3" style="margin-bottom:56px">
+<div class="rv" style="background:#F7F3EC;padding:44px 36px"><p class="ko" style="font-size:22px;line-height:1.6;color:#4A3728;margin-bottom:20px">식탁이나 책상에서 오래 앉는다면</p><p class="ser" style="font-size:30px;color:#7F6030">→ Calm</p></div>
+<div class="rv" style="background:#F7F3EC;padding:44px 36px"><p class="ko" style="font-size:22px;line-height:1.6;color:#4A3728;margin-bottom:20px">책을 읽고 쉬는 시간이 길다면</p><p class="ser" style="font-size:30px;color:#7F6030">→ Cradle</p></div>
+<div class="rv" style="background:#F7F3EC;padding:44px 36px"><p class="ko" style="font-size:22px;line-height:1.6;color:#4A3728;margin-bottom:20px">하루를 마무리하는 자리를 찾는다면</p><p class="ser" style="font-size:30px;color:#7F6030">→ Hush</p></div>
+</div>
+<p class="lead" style="text-align:center">고민된다면 쇼룸에서 함께 골라 드립니다.</p>
+</div>
+</section>
+
+<!-- 10 하단 CTA -->
+<section class="banner ondark" style="position:relative;height:560px;overflow:hidden;background:#2B2825;color:#F7F3EC">
+<img src="assets/showroom.png" alt="Repose 쇼룸 전경" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;background:rgba(43,40,37,.55)"></div>
+<div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px">
+<h2 class="h2 big" style="font-size:40px;line-height:1.5;max-width:720px;margin-bottom:36px">어떤 의자가 맞을지 고민된다면,<br>쇼룸에서 함께 골라 드립니다.</h2>
+<a class="btn" href="visit.html">Book a Consultation</a>
+</div>
+</section>
+
+<footer class="ft">
+<div class="wrap">
+<div class="f4" style="display:grid;grid-template-columns:1.4fr 1fr 1.4fr 1fr;column-gap:48px;padding-bottom:64px;border-bottom:1px solid rgba(184,169,154,.4)">
+<div><p class="logo" style="font-size:32px;color:#F7F3EC">Repose</p><p style="margin-top:8px">Rest, beautifully.</p></div>
+<div><h4>Menu</h4><ul><li><a href="story.html">Story</a></li><li><a href="collections.html">Collections</a></li><li><a href="visit.html">Visit</a></li></ul></div>
+<div><h4>Showroom</h4><p>서울시 강남구 ○○로 12<br>화~일 11:00~19:00</p></div>
+<div><h4>Follow</h4><ul><li><a href="#">인스타그램</a></li><li><a href="#">카카오톡</a></li></ul></div>
+</div>
+<p style="font-size:13px;color:#D9CFC0;padding-top:28px">© Repose</p>
+</div>
+</footer>
+<a class="fab" href="visit.html">Book a Visit</a>
+</div>
+</body>
+</html>
